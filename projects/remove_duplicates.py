@@ -8,18 +8,17 @@
 # Original: [1, 2, 2, 3]
 # New: [1, 2, 3]
 
-original_list = [1, 2, 2, 3]
-num = []
+original = [1, 2, 2, 3]
+new = [0]
 
-# for num in range(0, len(original_list)):
-#     for num_1 in range(1, len(original_list)):
-#         if original_list[num] == original_list[num_1]:
+print(len(new))
 
-# for index in range(0, len(original_list) + 1):
-#         if num[index] == original_list[index]:
-#             original_list.pop(index)
-#         else:
-#             num.append(original_list[index])
 
-print(original_list)
-print(num)
+for index in range(0, len(original)):
+    if new[index] == original[index]:
+        original.pop(index)
+    new.append(original[index])
+
+new.pop(0)
+
+print(f'New: {new}')
