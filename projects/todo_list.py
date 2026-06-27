@@ -11,12 +11,24 @@
 # 1. Learn Python
 # 2. Read Docs
 
-task_1 = input('Add Task: ')
-task_2 = input('Add Task: ')
+print('Todo List: ')
+print(' - Write Done When You Are Done With Adding Todo')
+print('')
 
-tasks = [task_1, task_2]
+is_running = 1
+count = 0
+todos = []
+
+while is_running:
+    todo = input('Add Task: ')
+    if todo == 'done':
+        is_running = 0
+    else:
+        todos.append(todo)
 
 print('')
 print('Tasks: ')
-print(f'1. {tasks[0]}')
-print(f'2. {tasks[1]}')
+
+for todo in todos:
+    count += 1
+    print(f'{count}. {todo}')
