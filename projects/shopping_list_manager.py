@@ -11,12 +11,24 @@
 # Milk
 # Bread
 
-item_1 = input('Add Item: ')
-item_2 = input('Add Item: ')
+print('Shopping List Manager: ')
+print(' - Write Done When You Are Done With Adding Items')
+print('')
 
-shopping_list = [item_1, item_2]
+is_running = 1
+count = 0
+shopping_list = []
+
+while is_running:
+    item = input('Add Item: ')
+    if item == 'done':
+        is_running = 0
+    else:
+        shopping_list.append(item)
 
 print('')
 print('Shopping List: ')
-print(shopping_list[0])
-print(shopping_list[1])
+
+for item in shopping_list:
+    count += 1
+    print(f'{count}. {item}')
