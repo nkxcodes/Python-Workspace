@@ -7,6 +7,7 @@ tasks = []
 
 
 while is_running_outer:
+    
     print('===== TO DO LIST =====')
     print('1. Add Task')
     print('2. View Tasks')
@@ -16,6 +17,7 @@ while is_running_outer:
     choosed = int(input('Choose: '))
 
     if choosed == 1:
+
         is_running = True
         print('Enter Done to end the program: ')
         while is_running:
@@ -25,7 +27,9 @@ while is_running_outer:
             tasks.append(task)
         print(tasks)
         print('')
+
     elif choosed == 2:
+
         print('')
         if len(tasks) == 0:
             print('No Tasks Available.')
@@ -33,7 +37,9 @@ while is_running_outer:
             for index, task in enumerate(tasks, start=1):
                 print(f'{index}. {task}')
         print('')
+
     elif choosed == 3:
+
         if len(tasks) == 0:
             print('No Tasks Available.')
         else:
@@ -42,6 +48,9 @@ while is_running_outer:
         task_to_remove = int(input('Enter task number to remove: '))
         tasks.pop(task_to_remove - 1)
         print('')
+
     elif choosed == 4:
+
         is_running_outer = False
         print('Thank You! See you soon')
+
